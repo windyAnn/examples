@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		#my3d {
+			-webkit-perspective: 800px;
+			-webkit-perspective-origin: 50% 50%;
+			overflow: hidden;
+		}
+
+		#pageGroup {
+			width: 400px;
+			height: 400px;
+			margin: 0 auto;
+			-webkit-transform-style: preserve-3d; /*3维炒作*/
+			position: relative;
+			/*perspective: 800px;
+			perspective-origin: top;
+			transform-style:preserve-3d ;*/
+
+		}
+
+		.page {
+			width: 360px;
+			height: 360px;
+			padding: 20px;
+			background-color: black;
+			color: white;
+
+			font-size: 360px;
+			font-weight: bold;
+			line-height: 360px;
+			text-align: center;
+			position: absolute;
+			-webkit-transform: rotateY(90deg);
+			transition: all 2s;
+			transform-origin: left;
+		}
+
+		#op {
+			text-align: center;
+			margin-top: 10px;
+		}
+
+		#page1 {
+			-webkit-transform: rotateY(0deg);
+			transition: all 2s;
+		}
+		.active{
+			transform: rotateX(-90deg);
+		}
+
+	</style>
+</head>
+<body>
+<div id="my3d">
+	<div id="pageGroup">
+		<div class="page" id="page1">1</div>
+		<div class="page" id="page2">2</div>
+		<div class="page" id="page3">3</div>
+		<div class="page" id="page4">4</div>
+		<div class="page" id="page5">5</div>
+	</div>
+
+</div>
+<div id="op">
+	<a id="next" href="javascript:next()">next</a>&nbsp;<a href="javascript:prev()">prev</a>
+</div>
+
+<script>
+	var cur = 1;
+	function next() {
+if(cur==5) return;
+		var curPage = document.getElementById("page" + cur);   //用class就不行哦
+		curPage.style.webkitTransform = "rotateY(-270deg)";
+
+		cur++;
+		var nextPage = document.getElementById("page" + cur);
+		nextPage.style.webkitTransform = "rotateY(0deg)";
+	}
+		function prev() {
+			if(cur==1) return;
+			var curPage = document.getElementById("page" + cur);
+			curPage.style.webkitTransform = "rotateY(90deg)";
+			cur--;
+			var nextPage = document.getElementById("page" + cur);
+			nextPage.style.webkitTransform = "rotateY(0deg)";
+		}
+</script>
+</body>
+</html>

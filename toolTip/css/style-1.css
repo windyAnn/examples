@@ -1,0 +1,157 @@
+html{
+	width:100%;
+	height: 100%;
+	-moz-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+
+}
+img{
+	width: 700px;
+}
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: #47c9af;
+	color: #74777b;
+	font-weight: 300;
+	font-size: 1.5em;
+	font-family: 'Raleway', Arial, sans-serif;
+}
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a:link, a:visited, a:focus{
+	text-decoration: none;
+	outline: none;
+}
+*, *:after, *:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+*:after, *:before{
+	display: block;
+	content: "";
+}
+*:after{
+	clear: both;
+}
+/*导航*/
+.nav{
+	width: 800px;
+	height: 300px;
+	margin: 100px auto;
+}
+.nav li{
+	display: inline-block;   /*在一行*/
+	margin: 0 1em;
+}
+.tooltip{
+	display: inline-block;
+	font-weight: 700;
+	color: rgba(0,0,0,0.3);
+	padding: 0.15em 0.1em 0;
+	position: relative;
+	z-index: 999;
+	-webkit-transition: color 0.3s;
+}
+.tooltip:hover{
+	color: rgba(255,255,255,1);
+}
+.tooltip .tooltip-cont{
+	position: absolute;
+	z-index: 9999;
+	width: 80px;
+	height: 80px;
+	border-radius:50%;
+	background: #fff;
+	left: 50%;
+	margin-left: -40px;   /*居中*/
+	bottom: 100%;
+	margin-bottom: 20px;
+	text-align: center;
+	padding-top: 25px;
+	color:  #47c9af;
+	opacity: 0;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+}
+.tooltip .tooltip-cont i{
+	opacity:0;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+}
+.tooltip-cont::after{
+	display: block;
+	content: "";
+	width: 30px;
+	height: 20px;
+	background: url("../img/tooltip1.svg") no-repeat center center ;  /*放大不会有改变svg*/
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin: -7px 0 0 -15px;
+}
+.tooltip-eff-1 .tooltip-cont{
+	-webkit-transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);/*translate3d平移*/
+	-webkit-transform-origin: 50% 100% ;
+}
+
+.tooltip-eff-1 .tooltip-cont i{
+	-webkit-transform:scale3d(0,0,0)
+}
+
+.tooltip-eff-2 .tooltip-cont{
+	-webkit-transform: translate3d(0,20px,0);
+
+}
+
+.tooltip-eff-2 .tooltip-cont i{
+	/*-webkit-transform:scale3d(0,0,1)*/
+	-webkit-transform: translate3d(0,15px,0);
+}
+.tooltip-eff-3 .tooltip-cont{
+	-webkit-transform: rotate3d(0,1,0, 90deg) translate3d(0,15px,0);
+	-webkit-transform-origin:50% 100% ;
+}
+
+.tooltip-eff-3 .tooltip-cont i{
+	/*-webkit-transform:scale3d(0,0,1)*/
+	-webkit-transform:scale3d(0,0,1) translate3d(0,15px,0);  /*为什么没有动画呢*/
+}
+
+.tooltip-eff-4 .tooltip-cont{
+	-webkit-transform: translate3d(0,-15px,0);
+	-webkit-transform-origin:50% 100% ;
+}
+
+.tooltip-eff-4 .tooltip-cont i{
+	/*-webkit-transform:scale3d(0,0,1)*/
+	-webkit-transform: translate3d(0,15px,0);  /*为什么没有动画呢*/
+}
+
+.tooltip-eff-5 .tooltip-cont{
+	-webkit-transform: scale3d(0,0,1);
+	-webkit-transform-origin:50% 100% ;
+
+}
+
+.tooltip-eff-5 .tooltip-cont i{
+	/*-webkit-transform:scale3d(0,0,1)*/
+	-webkit-transform: translate3d(0,15px,0);
+
+}
+
+.tooltip:hover .tooltip-cont,
+.tooltip:hover .tooltip-cont i{
+
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0) rotate3d(1,1,1,0deg) scale3d(1,1,1);/*translate3d平移*/
+
+}
