@@ -1,0 +1,170 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a:link, a:visited, a:focus{
+
+	text-decoration: none;
+	outline: none;
+	color: black;
+}
+li{
+	list-style: none;
+}
+header{
+	transition: all 2s;
+	overflow: hidden;
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 999;
+	height:180px;
+	width: 100%;
+	border: 1px solid black;
+	background: white;
+}
+header .logo{
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+header #nav a {
+	display: block;
+}
+header #nav{
+	margin-top: 20px;
+	text-align: center;
+}
+header #nav li{
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	position: relative;
+}
+header ul li .span-left{
+	position: absolute;
+	left: 0;
+	top:0;
+}
+header ul li .span-right{
+	position: absolute;
+	right: 0;
+	top:0;
+}
+header ul  img{
+	width: 0;
+}
+header ul li .on img{
+	width: 37px;
+}
+
+header #pull-down ul{
+	margin-left: 450px;
+
+}
+header #pull-down li{
+	display: inline-block;
+	width: 150px;
+}
+header #pull-down li p{
+	line-height: 30px;
+}
+
+header:hover{
+	height:350px;
+	width: 100%;
+}
+/*中间部分*/
+section{
+	top: 180px;
+	position: relative;
+	width: 100%;
+	height: 520px;
+	z-index: 99;
+	overflow: hidden;
+}
+section img{
+	position: absolute;
+	width: 100%;
+}
+.camera_wrap{
+top: 180px;
+}
+#indexServiceBox{
+	top: 580px;
+
+	width: 100%;
+	height: 400px;
+	position: relative;
+	background: white;
+
+}
+#indexServiceBox ul{
+	position: absolute;
+
+	width: 900px;
+	height: 400px;
+	left: 50%;
+	margin-left: -410px;
+	text-align: center;
+}
+#indexServiceBox ul li{
+
+	width: 298px;
+	height: 380px;
+	float: left;
+
+}
+#indexServiceBox ul li{
+	background: url("../images/serviceBgBlack.jpg") no-repeat 58px 20px;
+}
+#indexServiceBox ul .indexServiceBox span{
+	width: 82px;
+	height: 74px;
+	position: absolute;
+	background: url("../images/serviceIcon.gif") no-repeat ;
+
+}
+#indexServiceBox ul .indexServiceBox1 .span1{
+
+	left: 101px;
+	top: 65px;
+}
+#indexServiceBox ul .indexServiceBox1 .span2{
+
+	background-position: 0 -74px;
+	left: 14px;
+	top: 65px;
+	opacity: 0;
+}
+#indexServiceBox ul .indexServiceBox2 .span1{
+
+	background-position: 0 -148px;
+	left: 373px;
+	top: 65px;
+}
+#indexServiceBox ul .indexServiceBox2 .span2{
+
+	background-position: 0 -222px;
+	left: 284px;
+	top: 65px;
+	opacity: 0;
+}
+#indexServiceBox ul .indexServiceBox3 .span1{
+	background-position: 0 -296px;
+	left: 643px;
+	top: 65px;
+}
+#indexServiceBox ul .indexServiceBox3 .span2{
+
+	background-position: 0 -368px;
+	left: 554px;
+	top: 65px;
+	opacity: 0;
+}
+.indexServiceInf{
+
+line-height: 25px;
+	margin-top: 250px;
+}
+

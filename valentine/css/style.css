@@ -1,0 +1,64 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	perspective: 1000px;
+	-webkit-transform-style:preserve-3d;
+	-webkit-backface-visibility:hidden;
+	-webkit-perspective:1000px;
+}
+ul,li{
+	list-style: none;
+}
+
+#content{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	border   : 1px solid #ccc;
+}
+.wrap-content{  /*ul*/
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+.wrap-content li {
+	background: #CAE1FF;
+	background-size: 100% 100%;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.a_background{
+	position: absolute;
+	background: url("../images/QixiA.png") no-repeat;
+	background-size: 100% 100%;
+}
+#boy{
+	position: absolute;
+	z-index: 2;
+
+}
+.fadeIn{
+	transform: translate3d(0,0,-60px);
+	opacity: 0;
+	transition: transform 2s , opacity 3s;
+}
+.withFlower{
+	transform: translate3d(0,0,60px) ;
+	opacity: 1;
+	transition:all 1s
+}
+
+
+
+

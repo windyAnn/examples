@@ -1,0 +1,59 @@
+.b_background{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url("../images/QixiB-dark.png") no-repeat;
+	background-size: 100% 100%;
+}
+.shop{
+	position: absolute;/*先用relative*/
+	width: 45%;
+	height: 37%;
+	top: 35%;
+	left: 28%;
+}
+.door{
+	position: absolute;
+	width: 29%;
+	height: 65%;
+	top: 35.1%;
+	left: 53%;
+
+}
+.door_left{
+	position: absolute;
+	background: url("../images/door-left.png") no-repeat;
+	width: 50%;
+	height: 100%;
+	left: 0;
+	top:0;
+	background-size: 100% 100%;
+}
+.door_right{
+	position: absolute;
+	background: url("../images/door-right.png") no-repeat;
+	width: 50%;
+	height: 100%;
+	right: 0;
+	top:0;
+	background-size: 100% 100%;
+}
+/*.open_door_left{
+	transform: rotateY(-120deg);
+	transition: all 1s;
+	transform-origin: left;
+}
+.open_door_right{
+	transform: rotateY(90deg);
+	transition: all 1s;
+	transform-origin: right;
+}*/
+/*平移打开*/
+.open_door_left{
+	width: 0;
+	transition: all 1s;
+}
+.open_door_right{
+	width: 0;
+	transition: all 1s;
+}

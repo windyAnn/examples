@@ -1,0 +1,175 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a:link, a:visited, a:focus{
+
+	text-decoration: none;
+	outline: none;
+	color: black;
+}
+li{
+	list-style: none;
+}
+header{
+	transition: all 2s;
+	overflow: hidden;
+	top:0;
+	left: 0;
+	z-index: 999;
+	height:180px;
+	width: 100%;
+	border: 1px solid black;
+	background: white;
+}
+header .logo{
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+header #nav a {
+	display: block;
+}
+header #nav{
+	margin-top: 20px;
+	text-align: center;
+}
+header #nav li{
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	position: relative;
+}
+header ul li .span-left{
+	position: absolute;
+	left: 0;
+	top:0;
+}
+header ul li .span-right{
+	position: absolute;
+	right: 0;
+	top:0;
+}
+header ul  img{
+	width: 0;
+}
+header ul li .on img{
+	width: 37px;
+}
+
+header #pull-down ul{
+	margin-left: 450px;
+
+}
+header #pull-down li{
+	display: inline-block;
+	width: 150px;
+}
+header #pull-down li p{
+	line-height: 30px;
+}
+
+header:hover{
+	height:350px;
+	width: 100%;
+}
+/*中间部分*/
+
+#indexServiceBox{
+
+	width: 1050px;
+	height: 400px;
+	background: white;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#indexServiceBox ul{
+
+	width: 1050px;
+	height: 400px;
+	overflow: hidden;
+
+}
+#indexServiceBox ul li {
+
+	width: 260px;
+	height: 380px;
+	float: left;
+	background: url("../images/serviceBgBlack.jpg") no-repeat center 30px;
+	padding: 20px;
+
+
+}
+#indexServiceBox ul .indexServiceBox{
+
+	width: 260px;
+	height: 190px;
+}
+
+#indexServiceBox ul .indexServiceBox span{
+	width: 82px;
+	height: 74px;
+
+	background: url("../images/serviceIcon.gif") no-repeat ;
+	left: 50%;
+	margin-left: -42px;
+	top: 50%;
+	margin-top: -37px;
+
+}
+.span2{
+	opacity: 0;
+}
+
+#indexServiceBox ul .indexServiceBox1 .span2{
+
+	background-position: 0 -74px;
+	left: 20%;
+	margin-left: -42px;
+
+
+}
+#indexServiceBox ul .indexServiceBox2 .span1{
+
+	background-position: 0 -148px;
+
+}
+#indexServiceBox ul .indexServiceBox2 .span2{
+
+	background-position: 0 -222px;
+	left: 20%;
+	margin-left: -42px;
+
+}
+#indexServiceBox ul .indexServiceBox3 .span1{
+	background-position: 0 -296px;
+
+}
+#indexServiceBox ul .indexServiceBox3 .span2{
+
+	background-position: 0 -368px;
+	left: 20%;
+	margin-left: -42px;
+
+}
+.indexServiceInf{
+	line-height: 25px;
+	margin-top: 50px;
+}
+.hover {
+	color: #38aca1;
+	transition: all 0.5s;
+}
+#indexServiceBox ul .hover .indexServiceBox .span1{
+	left: 182px;
+	opacity: 0;
+	transition: left 0.3s, opacity 0.5s;
+}
+ #indexServiceBox  ul .hover .indexServiceBox .span2{
+	 left: 130px;
+	opacity: 1;
+	 transition-delay: 0.1s;
+	 transition: all 0.5s;
+}
+
+

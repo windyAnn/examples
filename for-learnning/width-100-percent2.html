@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style type="text/css">
+		.parent{
+			width: 100%;
+			height: 100%;
+			background: blue;
+			line-height: 30px;
+		}
+		.child{
+			width: 100px;
+			height: 30px;
+			background: red;
+		}
+		/*如果没有加任何东西，div父级100%所对应的是父级（body或html）的宽度，
+		而高度是（body或html）的高度，只是此时的（body或html）的高度是装在内部的元素的高度*/
+
+		.parent-margin{/*总宽度1444，元素的宽度1424，，html总宽度1440，非常奇怪，*/
+			width: 100%;
+			height: 100%;
+			background: blue;
+			line-height: 30px;
+			margin: 10px;
+		}
+		.child-margin{
+			width: 100px;
+			height: 30px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+<div class="parent">
+	<div class="child"></div>
+</div>
+<div class="parent-margin">
+	<div class="child-margin"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style type="text/css">
+		.parent{
+			width: 200px;
+			height: 100px;
+			background: blue;
+			line-height: 30px;
+		}
+		.child{
+			width: 100%;
+			height: 100%;
+			background: red;
+		}
+		/*如果子级的宽度100%，则表示与父级的宽度相同（高度也是）*/
+		.parent-margin{/*差别不是很大，但是当parent-margin有内容时，
+		child-margin会等parent-margin填完之后往下放置*/
+			width: 200px;
+			height: 100px;
+			background: blue;
+			line-height: 30px;
+			margin: 10px;
+		}
+		.child-margin {
+			width: 100%;
+			height: 100%;
+			background: red;
+		}
+		.parent-border{
+			width: 200px;
+			height: 100px;
+			background: blue;
+			line-height: 30px;
+			border: 5px solid black;
+		}
+		.child-border{
+			width: 100%;
+			height: 100%;
+			background: red;
+		}
+		/*100%只跟他的父级的元素的相同，跟border,margin,padding 均无关*/
+		.parent-padding{
+			width: 200px;
+			height: 100px;
+			background: blue;
+			line-height: 30px;
+			padding: 10px;
+		}
+		.child-padding{
+			width: 100%;
+			height: 100%;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+<div class="parent">
+	<div class="child"></div>
+</div>
+<div class="parent-margin">
+	<div class="child-margin"></div>
+</div>
+<div class="parent-border">
+	<div class="child-border"></div>
+</div>
+<div class="parent-padding">
+	<div class="child-padding"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style type="text/css">
+		#main {min-width:60px;min-height:600px; background:#FEFF0A;padding-right:300px;}
+		#main-left {margin-right:-300px;width:300px;min-height:400px;background:#98FF1A;}
+		#main-right {min-height:400px;background:#7CC0FF;}
+		.float {float:right;}
+		.clear{clear:both; height : 0; line-height:0; font-size:0;}
+	</style>
+</head>
+<body>
+
+<div id="main">
+	<div id="main-left"  class="float">
+		这个是右边部分，宽度确定
+	</div>
+	<div id="main-right">
+		这个是左边部分，宽度自动扩展
+	</div>
+	<div class="clear"></div>
+</div>
+</body>
+</html>

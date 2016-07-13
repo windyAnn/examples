@@ -1,0 +1,49 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style: none;
+}
+/*总的大框*/
+.poster-main{
+	width: 800px;
+	height: 270px;
+
+	position: relative;
+}
+/*ul*/
+.poster-main .poster-list{
+	width: 800px;
+	height: 270px;
+	position: absolute;
+	overflow: hidden;
+}
+/*li,虽然没有设置li的高宽，但默认为是内部img的高宽*/
+.poster-main .poster-list .poster-item{
+	position: absolute;
+	left: 0;
+	top:0;
+}
+/*如果a和img不设置为block，中间就会有padding*/
+.poster-main a, .poster-main img{
+	display: block;
+}
+/*按钮*/
+.poster-main .poster-btn{
+	width: 100px;
+	height: 270px;
+	position: absolute;
+	z-index: 999;
+	cursor: pointer;
+}
+.poster-main .poster-prev-btn{
+	left: 0;
+	top:0;
+	background: url("../images/btn_l.png") no-repeat center center;
+}
+.poster-main .poster-next-btn{
+	right: 0;
+	top:0;
+	background: url("../images/btn_r.png") no-repeat center center;
+}

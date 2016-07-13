@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.parent {
+			width: 200px;
+			height: 100px;
+			background: blue;
+			line-height: 30px;
+		}
+		.child {
+			width: 100px;
+			height: 50px;
+			background: red;
+			position: relative;
+		}
+		.child-2 {
+			width: 100%;
+			height: 100%;
+			background: yellow;
+			position: absolute;   /*不会相对于兄弟级别，会相对于body*/
+		}
+	</style>
+</head>
+<body>
+<div class="parent">A
+	<div class="child">B</div>
+	<div class="child-2">C</div>
+</div>
+</body>
+</html>
