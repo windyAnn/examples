@@ -3,13 +3,17 @@ var loopPlayerInt = (function ($) {
 	next = null,
 	autoPlay = null,
 	imgList = null,
-	transformOrigin = "128px 600px",
-	transformOriginImg = "128px 800px",
+	transformOrigin = "0px 0px",
+	transformOriginImg = "0px 0px",
 	imgArrAll = createImg([["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg"],
 	  ["images/5.jpg", "images/6.jpg", "images/7.jpg", "images/8.jpg"],
 	  ["images/9.jpg", "images/10.jpg", "images/11.jpg", "images/12.jpg"]]),
 	imgArrIndex = 0,
-	imgAngle = 45;
+	imgAngle = 45,
+	speedTime = 300,
+	clickBool = true,
+	play = "play",
+	timerInterval = null;
 
   function init() {
 	prev = $(".prev");
@@ -18,7 +22,8 @@ var loopPlayerInt = (function ($) {
 	imgList = $("#main ul li");
 	var imgOrigin = imgList.css("transform-origin", transformOrigin);
 	configer();
-	setEvent()
+	setEvent();
+
   }
 
   function configer() {
@@ -42,13 +47,19 @@ var loopPlayerInt = (function ($) {
 	  EventGo(1);
 	  return false;
 	});
-	autoPlay.bind("click", function () {
-
-	})
+	imgAutoPlay();
   }
 
   function EventGo(d) {
+	if(clickBool == false)return;
+	clickBool = false;
 	imgArrIndex += d;
+	//console.log(imgArrAll.length-1);
+	if(imgArrIndex>imgArrAll.length-1){
+	  imgArrIndex = 0;
+	}else if(imgArrIndex<0){
+	  imgArrIndex = imgArrAll.length-1;
+	}
 	$(imgList).each(function (i) {
 	  var imgItem = $(this),
 		thisImg = imgItem.children("img"),
@@ -61,12 +72,38 @@ var loopPlayerInt = (function ($) {
 	  thisImg.css({"transform-origin": transformOriginImg});
 	  thisImg.animate({
 		"transform": "rotate("+d*imgAngle+"deg)"
-	  });
-	  targetImg.animate({"transform": "rotate("+0+"deg)"})
-
+	  }
+	  );
+	 var dureTime = speedTime*i;
+	  setTimeout(targetImg.animate({"transform": "rotate("+0+"deg)"},500,function () {
+		thisImg.remove();
+		if(dureTime == speedTime*(imgList.length-1)){
+		  clickBool = true;
+		}
+	  }),dureTime)
 	})
   }
+function imgAutoPlay() {
+  EventGo(1);
+  timerInterval = setInterval(function () {
+	EventGo(1);
+  },3000);
+  autoPlay.bind("click",function () {
+	if (play === "play"){
+	  clearInterval(timerInterval);
+	  play = "pause";
+	  autoPlay.html(play);
+	}else {
+	  timerInterval = setInterval(function () {
+		EventGo(1);
+	  },3000);
+	  play = "play";
+	  autoPlay.html(play);
+	}
+  });
 
+
+}
   function createImg(arr) {
 	var ImgArr = [];
 	//遍历数组arr

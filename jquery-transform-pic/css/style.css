@@ -12,6 +12,7 @@
 #main ul{
 	position: absolute;
 	height: 350px;
+	overflow: hidden;
 }
 #main ul li {
 	float: left;
@@ -20,6 +21,7 @@
 	height: 300px;
 
 	margin-top: 30px;
+
 	overflow: hidden;
 	/*transform-origin: 128px 800px;*/
 	border: 10px solid white;
@@ -30,6 +32,7 @@
 }*/
 #main ul img{
 	position: absolute;
+	width: 250px;
 }
 #main h2{
 	position: absolute;
