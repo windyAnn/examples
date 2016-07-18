@@ -73,27 +73,18 @@
 <script>
 	var cur = 1;
 	function next() {
-
+		if (cur == 5) return;
 		var curPage = document.getElementById("page" + cur);   //用class就不行哦
 		curPage.style.webkitTransform = "rotateX(90deg)";
-
-
-		if (cur == 5) {
-			cur=1;
-
-			curPage.style.webkitTransform = "rotateX(-90deg)";
-		}
 		cur++;
 		var nextPage = document.getElementById("page" + cur);
 		nextPage.style.webkitTransform = "rotateX(0deg)";
 	}
 		function prev() {
-
+			if (cur == 1) return;
 			var curPage = document.getElementById("page" + cur);
-			curPage.style.webkitTransform = "rotateX(90deg)";
-			if (cur == 1) {
-				cur = 6;
-			}
+			curPage.style.webkitTransform = "rotateX(-90deg)";
+
 			cur--;
 
 			var nextPage = document.getElementById("page" + cur);
