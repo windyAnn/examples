@@ -19,7 +19,6 @@
 			/*perspective: 800px;
 			perspective-origin: top;
 			transform-style:preserve-3d ;*/
-
 		}
 
 		.page {
@@ -28,7 +27,6 @@
 			padding: 20px;
 			background-color: black;
 			color: white;
-
 			font-size: 360px;
 			font-weight: bold;
 			line-height: 360px;
@@ -47,10 +45,7 @@
 
 		#page1 {
 			transform: rotateX(0deg);
-			transition: all 2s;
-		}
-		.active{
-			transform: rotateX(-90deg);
+
 		}
 
 	</style>
@@ -80,16 +75,14 @@
 		var nextPage = document.getElementById("page" + cur);
 		nextPage.style.webkitTransform = "rotateX(0deg)";
 	}
-		function prev() {
-			if (cur == 1) return;
-			var curPage = document.getElementById("page" + cur);
-			curPage.style.webkitTransform = "rotateX(-90deg)";
-
-			cur--;
-
-			var nextPage = document.getElementById("page" + cur);
-			nextPage.style.webkitTransform = "rotateX(0deg)";
-		}
+	function prev() {
+		if (cur == 1) return;
+		var curPage = document.getElementById("page" + cur);
+		curPage.style.webkitTransform = "rotateX(-90deg)";
+		cur--;
+		var nextPage = document.getElementById("page" + cur);
+		nextPage.style.webkitTransform = "rotateX(0deg)";
+	}
 </script>
 </body>
 </html>

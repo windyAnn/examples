@@ -30,7 +30,6 @@ var chessBox = function () {
 };
 //画棋子
 var Piece = function (i, j, me) {
-
   context.beginPath();
   context.arc(15 + i * 30, 15 + j * 30, 13, 0, 2 * Math.PI);
   context.stroke();

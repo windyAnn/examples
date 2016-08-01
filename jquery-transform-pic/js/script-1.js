@@ -13,7 +13,9 @@ var loopPlayerInt = (function ($) {
 	speedTime = 300,
 	clickBool = true,
 	play = "play",
-	timerInterval = null;
+	timerInterval = null,
+	dt = 3000;   //动画执行的间隔时间
+
 
   function init() {
 	prev = $(".prev");
@@ -23,6 +25,7 @@ var loopPlayerInt = (function ($) {
 	var imgOrigin = imgList.css("transform-origin", transformOrigin);
 	configer();
 	setEvent();
+	imgAutoPlay(dt);
 
   }
 
@@ -47,7 +50,7 @@ var loopPlayerInt = (function ($) {
 	  EventGo(1);
 	  return false;
 	});
-	imgAutoPlay();
+
   }
 
   function EventGo(d) {
@@ -75,19 +78,18 @@ var loopPlayerInt = (function ($) {
 	  }
 	  );
 	 var dureTime = speedTime*i;
-	  setTimeout(targetImg.animate({"transform": "rotate("+0+"deg)"},500,function () {
+	  targetImg.animate({"transform": "rotate("+0+"deg)"},dureTime,function () {
 		thisImg.remove();
 		if(dureTime == speedTime*(imgList.length-1)){
 		  clickBool = true;
 		}
-	  }),dureTime)
+	  })
 	})
   }
-function imgAutoPlay() {
-  EventGo(1);
+function imgAutoPlay(dt) {
   timerInterval = setInterval(function () {
 	EventGo(1);
-  },3000);
+  },dt);
   autoPlay.bind("click",function () {
 	if (play === "play"){
 	  clearInterval(timerInterval);
@@ -96,7 +98,7 @@ function imgAutoPlay() {
 	}else {
 	  timerInterval = setInterval(function () {
 		EventGo(1);
-	  },3000);
+	  },dt);
 	  play = "play";
 	  autoPlay.html(play);
 	}

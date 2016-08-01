@@ -1,6 +1,4 @@
-/**
- * Created by shiyong on 7/6.
- */
+
 
 /*引进函数*/
 ;(function ($) {
