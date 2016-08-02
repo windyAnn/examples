@@ -1,0 +1,18 @@
+body{
+	background: #eee;
+}
+h1{
+	text-align: center;
+}
+.container{
+	position: relative;
+	width: 960px;
+	height: 450px;
+	margin: 60px auto;
+}
+img{
+	position: absolute;
+	width: 250px;
+	padding: 10px 10px 15px 10px ;
+	background: white;
+}
